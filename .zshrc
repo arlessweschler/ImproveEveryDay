@@ -91,40 +91,39 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="subl ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 
-
 export PATH="/Users/AndyChang/script:/usr/local/sbin:$PATH"
 
 alias ll='ls -alh'
-# alias eadb='~/script/eadb.python'
+# alias adb='~/script/adb'
 
-alias killadb='eadb kill-server \ eadb devices'
+alias killadb='adb kill-server \ adb devices'
 # alias emptytrash='rm -rf ~/.Trash'
 alias emptytrash='sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl'
 alias updatedev='sh /Users/AndyChang/Tencent/workDev/up.sh'
-alias cf="eadb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'"
-alias da='eadb shell dumpsys activity activities'
-alias stop='eadb shell am force-stop '
-alias testapp='eadb shell am start -n com.tencent.wecarapptest/com.tencent.wecarapptest.MainActivity'
-alias llmusic='eadb shell ls -Rl /storage/extsd/tencent/wecarmusic'
-alias rmmusic='eadb shell ls -R /storage/extsd/tencent/wecarmusic/data ; eadb uninstall com.tencent.wecarmusic ; eadb shell rm -r /storage/extsd/tencent/wecarmusic/data ; eadb shell ls /storage/extsd/tencent/wecarmusic/data'
-alias uninstallmusic='eadb uninstall com.tencent.wecarmusic ; eadb shell ls /storage/extsd/tencent/wecarmusic/data'
-alias cleanmusic='eadb shell pm clear com.tencent.wecarmusic ; eadb shell ls -R /storage/extsd/tencent/wecarmusic/data ; eadb shell kill -9 `adb shell ps | grep music | cut -c10-15`;adb shell rm -r /storage/extsd/tencent/wecarmusic/data ; eadb shell ls /storage/extsd/tencent/wecarmusic/data'
-alias cleanprefmusic='eadb shell rm -r /storage/extsd/tencent/wecarmusic/data/pref ; eadb shell pm clear com.tencent.wecarmusic'
+alias cf="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'"
+alias da='adb shell dumpsys activity activities'
+alias stop='adb shell am force-stop '
+alias testapp='adb shell am start -n com.tencent.wecarapptest/com.tencent.wecarapptest.MainActivity'
+alias llmusic='adb shell ls -Rl /storage/extsd/tencent/wecarmusic'
+alias rmmusic='adb shell ls -R /storage/extsd/tencent/wecarmusic/data ; adb uninstall com.tencent.wecarmusic ; adb shell rm -r /storage/extsd/tencent/wecarmusic/data ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
+alias uninstallmusic='adb uninstall com.tencent.wecarmusic ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
+alias cleanmusic='adb shell pm clear com.tencent.wecarmusic ; adb shell ls -R /storage/extsd/tencent/wecarmusic/data ; adb shell kill -9 `adb shell ps | grep music | cut -c10-15`;adb shell rm -r /storage/extsd/tencent/wecarmusic/data ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
+alias cleanprefmusic='adb shell rm -r /storage/extsd/tencent/wecarmusic/data/pref ; adb shell pm clear com.tencent.wecarmusic'
 alias android='/Users/AndyChang/Library/Android/sdk/tools/android'
-alias agrep='''eadb logcat | grep -v -e 'E/RRCTRL_AVS' | grep'''
+alias agrep='''adb logcat | grep -v -e 'E/RRCTRL_AVS' | grep'''
 alias killmusic="adb shell kill -9 `adb shell ps | command grep music | cut -c10-15`"
 alias stopmusic="adb shell am force-stop com.tencent.wecarmusic"
-alias grepmusic="eadb logcat | grep `eadb shell ps | command grep music | cut -c10-15` | grep "
-alias grepallmusic="eadb logcat | grep `eadb shell ps | command grep music | cut -c10-15`"
+alias grepmusic="adb logcat | grep `adb shell ps | command grep music | cut -c10-15` | grep "
+alias grepallmusic="adb logcat | grep `adb shell ps | command grep music | cut -c10-15`"
 alias createsystrace="python ~/Library/Android/sdk/platform-tools/systrace/systrace.py  --time=5 -o mynewtrace.html sched gfx view wm"
 alias viewsystrace="open mynewtrace.html"
-alias currentapp="eadb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp&Window' | cut -d' ' -f6 | cut -d'/' -f 1"
-alias currentactivity="eadb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp&Window' | cut -d' ' -f6 | cut -d'}' -f 1"
+alias currentapp="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp&Window' | cut -d' ' -f6 | cut -d'/' -f 1"
+alias currentactivity="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp&Window' | cut -d' ' -f6 | cut -d'}' -f 1"
 
 export NVM_DIR="/Users/AndyChang/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-alias savelog="eadb logcat -v threadtime > log.txt"
+alias savelog="adb logcat -v threadtime > log.txt"
 
 # mount the android file image
 function mountAndroid { hdiutil attach ~/android.dmg -mountpoint /Volumes/android; }
