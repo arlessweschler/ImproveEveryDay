@@ -99,7 +99,7 @@ alias ll='ls -alh'
 alias killadb='adb kill-server \ adb devices'
 # alias emptytrash='rm -rf ~/.Trash'
 alias emptytrash='sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl'
-alias updatedev='sh /Users/AndyChang/Tencent/workDev/up.sh'
+alias updatedev='sh ~/Tencent/workDev/up.sh'
 alias cf="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'"
 alias da='adb shell dumpsys activity activities'
 alias stop='adb shell am force-stop '
@@ -109,7 +109,7 @@ alias rmmusic='adb shell ls -R /storage/extsd/tencent/wecarmusic/data ; adb unin
 alias uninstallmusic='adb uninstall com.tencent.wecarmusic ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
 alias cleanmusic='adb shell pm clear com.tencent.wecarmusic ; adb shell ls -R /storage/extsd/tencent/wecarmusic/data ; adb shell kill -9 `adb shell ps | grep music | cut -c10-15`;adb shell rm -r /storage/extsd/tencent/wecarmusic/data ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
 alias cleanprefmusic='adb shell rm -r /storage/extsd/tencent/wecarmusic/data/pref ; adb shell pm clear com.tencent.wecarmusic'
-alias android='/Users/AndyChang/Library/Android/sdk/tools/android'
+alias android='~/Library/Android/sdk/tools/android'
 alias agrep='''adb logcat | grep -v -e 'E/RRCTRL_AVS' | grep'''
 alias killmusic="adb shell kill -9 `adb shell ps | command grep music | cut -c10-15`"
 alias stopmusic="adb shell am force-stop com.tencent.wecarmusic"
@@ -120,7 +120,23 @@ alias viewsystrace="open mynewtrace.html"
 alias currentapp="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp&Window' | cut -d' ' -f6 | cut -d'/' -f 1"
 alias currentactivity="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp&Window' | cut -d' ' -f6 | cut -d'}' -f 1"
 
-export NVM_DIR="/Users/AndyChang/.nvm"
+ANDROID_SO="./build/intermediates/cmake/debug/obj/armeabi"
+ANDROID_SO_V7="./build/intermediates/cmake/debug/obj/armeabi-v7a"
+
+alias addr2lin="~/Library/Android/android-ndk-r10e/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-addr2line -p -f -e"
+alias ndk-stack="~/Library/Android/android-ndk-r10e/ndk-stack"
+
+alias ndkstacklogcat="adb shell logcat | ndk-stack -sym $ANDROID_SO"
+alias ndkstacklogcatv7="adb shell logcat | ndk-stack -sym $ANDROID_SO_V7"
+
+alias ndkstackfile="ndk-stack -sym $ANDROID_SO -dump "
+alias ndkstackfilev7="ndk-stack -sym $ANDROID_SO_V7 -dump "
+
+alias updatesource="source ~/.zshrc"
+
+
+
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias savelog="adb logcat -v threadtime > log.txt"
