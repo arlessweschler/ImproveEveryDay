@@ -133,7 +133,7 @@ alias ndkstackfile="ndk-stack -sym $ANDROID_SO -dump "
 alias ndkstackfilev7="ndk-stack -sym $ANDROID_SO_V7 -dump "
 
 alias updatesource="source ~/.zshrc"
-
+alias adinfo='python ~/script/adinfo.py'
 
 
 export NVM_DIR="~/.nvm"
