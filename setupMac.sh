@@ -11,3 +11,4 @@ bcomp ./script/ ~/script/
 bcomp ./.zshrc ~/.zshrc
 bcomp ./devreachout.txt ~/devreachout.txt
 bcomp ./reachout.txt ~/reachout.txt
+bcomp ./snip.txt ~/snip.txt
