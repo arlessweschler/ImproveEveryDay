@@ -9,6 +9,8 @@ git config --global --unset https.proxy
 git config --global http.proxy http://dev-proxy.oa.com:8080
 git config --global https.proxy https://dev-proxy.oa.com:8080
 
+git config --global http.proxy http://proxy.oa.com:8080
+git config --global https.proxy https://proxy.oa.com:8080
 
 dev-proxy.oa.com
 8080

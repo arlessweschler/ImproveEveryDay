@@ -104,6 +104,7 @@ alias cf="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'"
 alias da='adb shell dumpsys activity activities'
 alias stop='adb shell am force-stop '
 alias testapp='adb shell am start -n com.tencent.wecarapptest/com.tencent.wecarapptest.MainActivity'
+alias testapp2='adb shell am start -n com.tencent.testapi/.MainActivity'
 alias llmusic='adb shell ls -Rl /storage/extsd/tencent/wecarmusic'
 alias rmmusic='adb shell ls -R /storage/extsd/tencent/wecarmusic/data ; adb uninstall com.tencent.wecarmusic ; adb shell rm -r /storage/extsd/tencent/wecarmusic/data ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
 alias uninstallmusic='adb uninstall com.tencent.wecarmusic ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
