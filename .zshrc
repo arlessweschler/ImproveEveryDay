@@ -99,6 +99,7 @@ alias ll='ls -alh'
 alias killadb='adb kill-server \ adb devices'
 # alias emptytrash='rm -rf ~/.Trash'
 alias emptytrash='sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl'
+alias setupProxy='~/script/setupProxy.py'
 alias updatedev='sh ~/Tencent/workDev/up.sh'
 alias cf="adb shell dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'"
 alias da='adb shell dumpsys activity activities'
