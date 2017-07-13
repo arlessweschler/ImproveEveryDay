@@ -109,6 +109,8 @@ alias testapp2='adb shell am start -n com.tencent.testapi/.MainActivity'
 alias llmusic='adb shell ls -Rl /storage/extsd/tencent/wecarmusic'
 alias rmmusic='adb shell ls -R /storage/extsd/tencent/wecarmusic/data ; adb uninstall com.tencent.wecarmusic ; adb shell rm -r /storage/extsd/tencent/wecarmusic/data ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
 alias uninstallmusic='adb uninstall com.tencent.wecarmusic ; adb shell ls /storage/extsd/tencent/wecarmusic/data'
+alias rmeasyearn='adb uninstall com.tencent.easyearn'
+
 alias clearrlmusic='uninstallmusic ; adb root ; adb remount ; adb shell rm -rf /system/vendor/operator/app/WeCarMusic ; adb shell rm -rf /data/data/com.tencent.wecarmusic'
 alias dumpmusic='adb shell dumpsys meminfo com.tencent.wecarmusic'
 alias cleanmusic='adb shell pm clear com.tencent.wecarmusic ; adb shell ls -R /storage/extsd/tencent/wecarmusic/data ; adb shell kill -9 `adb shell ps | grep music | cut -c10-15`;adb shell rm -r /storage/extsd/tencent/wecarmusic/data ; adb shell ls /storage/extsd/tencent/wecarmusic/data'

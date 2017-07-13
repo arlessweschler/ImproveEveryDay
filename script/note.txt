@@ -1,4 +1,9 @@
 ★
+
+sudo spctl --master-disable
+
+macOS Sierra 任何来源
+
 addr2line、objdump、ndk-stack
 
 Tombstone

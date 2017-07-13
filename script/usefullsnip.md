@@ -54,3 +54,9 @@ eadb shell am start -n com.tencent.wecarnews/.UI.NewsMainTab
 
 ```
 
+### zip
+```
+zip -r xx.zip folderpath -x "*/build/*" -x "*/.svn/*"
+```
+
+
