@@ -81,6 +81,22 @@ Usage:
 adb pull /storage/extsd/demo.mp4
 
 
+
+adb shell screenrecord /storage/emulated/0/demo.mp4  --size 1024x600 --time-limit 5
+
+
+adb pull /storage/emulated/0/demo.mp4
+
+
+adb shell screenrecord /sdcard/demo.mp4  --size 1024x600 --time-limit 5
+
+
+adb pull /sdcard/demo.mp4
+
+
+
+
+
 ffmpeg -t 10 -ss 00:00:00 -i demo.mp4 demo.gif
 
 
