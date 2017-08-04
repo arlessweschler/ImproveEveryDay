@@ -142,6 +142,7 @@ alias updatesource="source ~/.zshrc"
 alias adinfo='python ~/script/adinfo.py'
 alias backupcode='sh /Users/AndyChang/Tencent/WorkDev/GOOD/backup.sh'
 alias myzip='~/script/myzip.py'
+alias decodepic='java -jar /Users/AndyChang/script/decodepic.jar '
 
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

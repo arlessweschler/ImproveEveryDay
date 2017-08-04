@@ -16,7 +16,8 @@ def parseArgument():
         return
     patharg = sys.argv[1]
     time = datetime.datetime.now().strftime('_%y年%m月%d日_%H点%M分%S秒')
-    cmd = 'zip -x "*/build/*" -x "*/.svn/*" -x "*.iml" -x "*.DS_Store" -r '
+    # cmd = 'zip -x "*/build/*" -x "*/.svn/*" -x "*.iml" -x "*.DS_Store" -x "*/.externalNativeBuild/*" -r '
+    cmd = 'zip -x "*/build/*" -x "*/.svn/*" -x "*/.git/*" -x "*.iml" -x "*.DS_Store" -x "*/.externalNativeBuild/*" -r '
     zipName = '%s%s.zip ' % (patharg, time)
     excuteCmd(cmd + zipName + patharg)
 
