@@ -38,3 +38,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 * [【Android开发】之Fragment与Acitvity通信](http://www.cnblogs.com/getherBlog/p/3949171.html)
 
+### [Android注解支持(Support Annotations)](http://www.flysnow.org/2015/08/13/android-tech-docs-support-annotations.html)
+
+
+

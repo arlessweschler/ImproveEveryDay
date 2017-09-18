@@ -13,12 +13,13 @@
 
 ## 专题
 
-### [OPENGL](opengl.md)
+### [OPENGL](openGL/opengl.md)
 
 ### [MVP](mvp.md)
 
 ### [Android](Android.md)
 
+### [Android JNI](Android_JNI.md)
 ### [HTML](HTML.md)
 
 ### [Kotlin](Kotlin.md)
@@ -35,7 +36,7 @@
 
 	* [使用Chrome来调试你的Android App](http://stormzhang.com/android/2015/03/05/android-debug-use-chrome/)
 
-
+### [地图人](地图人.md)
 
 
 
