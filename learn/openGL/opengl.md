@@ -1,6 +1,7 @@
 
 * [OpenGLES2.0原理浅析](OpenGLES2.0原理浅析.md)
 * [OpenGL INFO](OpenGL INFO.md)
+* [着色器语言 GLSL (opengl-shader-language)入门大全](https://github.com/wshxbqq/GLSL-Card)
 * [[OpenGL ES 03]3D变换：模型，视图，投影与Viewport](http://blog.csdn.net/kesalin/article/details/7168967)
 ![](media/15057271159094.jpg)
 
