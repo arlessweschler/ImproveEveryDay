@@ -41,4 +41,6 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ### [Android注解支持(Support Annotations)](http://www.flysnow.org/2015/08/13/android-tech-docs-support-annotations.html)
 
 
+[Android 文件或文件夹内容改变监听器（FileObserver）](http://www.cnblogs.com/sishuiliuyun/articles/3174098.html)
+
 
