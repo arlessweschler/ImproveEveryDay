@@ -149,6 +149,10 @@ export NVM_DIR="~/.nvm"
 
 alias savelog="adb logcat -v threadtime > log.txt"
 
+
+alias ytb="youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy https://dev-proxy.oa.com:8080 "
+alias ytb-p="youtube-dl --proxy https://dev-proxy.oa.com:8080 "
+alias ytb-pls="youtube-dl --proxy https://dev-proxy.oa.com:8080 --list-formats "
 # mount the android file image
 function mountAndroid { hdiutil attach ~/android.dmg -mountpoint /Volumes/android; }
 # unmount the android file image
@@ -161,5 +165,6 @@ ulimit -S -n 1024
 # export http_proxy=http://dev-proxy.oa.com:8080
 # export https_proxy=http://dev-proxy.oa.com:8080
 export no_proxy=localhost,.oa.com,.local
+
 
 

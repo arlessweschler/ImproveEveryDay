@@ -6,6 +6,8 @@
 # brew cask install qqmusic
 # brew cask install skitch
 # brew cask install wireshark
+# brew install youtube-dl
+
 
 bcomp ./script/ ~/script/
 bcomp ./.zshrc ~/.zshrc
