@@ -63,10 +63,19 @@
 
 
 # Teardowns 174
-# youtube-dl -i -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL00E2D0692404379B
+youtube-dl --flat-playlist --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL00E2D0692404379B
+# partdownload
+youtube-dl -i --playlist-items 120-174 --playlist-start 120 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL00E2D0692404379B
 
-# Repairs 169
-# youtube-dl -i -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL4INaL5vWobCFB0MEfwgOQfvjYniKhrwD
+youtube-dl -i --playlist-reverse -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL00E2D0692404379B
+
+# Repairs 170
+youtube-dl --flat-playlist --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL4INaL5vWobCFB0MEfwgOQfvjYniKhrwD
+youtube-dl -i --playlist-items 81-170 --playlist-start 80 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL4INaL5vWobCFB0MEfwgOQfvjYniKhrwD
+youtube-dl -i --playlist-items 1 --playlist-start 170 -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL4INaL5vWobCFB0MEfwgOQfvjYniKhrwD
+# partdownload
+youtube-dl -i -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL4INaL5vWobCFB0MEfwgOQfvjYniKhrwD
+--playlist-reverse
 
 # iFixit Opinion 12
 # youtube-dl -i -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy  https://dev-proxy.oa.com:8080 https://www.youtube.com/playlist?list=PL06F9D4AD2B747CE9
