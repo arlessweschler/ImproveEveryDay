@@ -6,8 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="gitster"
-
+# ZSH_THEME="gitster"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -149,6 +149,16 @@ export NVM_DIR="~/.nvm"
 
 alias savelog="adb logcat -v threadtime > log.txt"
 
+
+alias adbdumpmeminfo='adb shell dumpsys meminfo '
+
+alias adbdumpmodel='adb shell getprop ro.product.model'
+alias adbdumpbattery='adb shell dumpsys battery'
+alias adbdumpdisplay='adb shell dumpsys display | grep DisplayDeviceInfo'
+alias adbdumpcpuinfo='adb shell dumpsys cpuinfo'
+alias adbgetwmsize='adb shell wm size'
+alias adbgetwmdensity='adb shell wm density'
+alias adbgetmem='adb shell cat /proc/meminfo'
 
 alias ytb="youtube-dl -o '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' --convert-subs srt --write-sub --all-subs --embed-subs --proxy https://dev-proxy.oa.com:8080 "
 alias ytb-p="youtube-dl --proxy https://dev-proxy.oa.com:8080 "
